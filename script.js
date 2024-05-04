@@ -12,3 +12,16 @@ function login(email, password) {
         }, 2000);
     });
 }
+async function userLogin() {
+    const email = prompt("Enter your email:");
+    const password = prompt("Enter your password:");
+
+    try {
+        const result = await login(email, password);
+        alert(result);
+    } catch (error) {
+        alert(error);
+    }
+}
+
+userLogin()
