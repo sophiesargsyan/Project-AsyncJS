@@ -9,7 +9,7 @@ fetch('https://fakestoreapi.com/products')
 });
 
 async function getItem(id) {
-    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const response = await fetch(`https://fakestoreapi.com/products/` + " " + id);
     const data = await response.json();
     alert(`You have selected ${data.title}, the price of which is ${data.price}`);
 }
